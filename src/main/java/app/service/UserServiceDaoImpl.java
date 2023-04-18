@@ -1,5 +1,6 @@
 package app.service;
 
+import app.dao.UserDao;
 import app.dao.UserDaoImpl;
 import app.model.User;
 
@@ -12,7 +13,7 @@ import java.util.List;
 @Service
 @Transactional(readOnly = true)
 public class UserServiceDaoImpl implements UserService {
-    private final UserDaoImpl userDao;
+    private final UserDao userDao;
 
     @Autowired
     public UserServiceDaoImpl(UserDaoImpl userDao) {
